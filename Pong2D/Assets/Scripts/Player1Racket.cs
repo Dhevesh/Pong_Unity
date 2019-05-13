@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Player1Racket : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float movementSpeed = 250f;
+    public float maxSpeed = 500f;
+
+    Rigidbody2D rigidBody2D;
     void Start()
     {
-        
+        rigidBody2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        float moveVertical = Input.GetAxis("Vertical");
+        Vector2 movePlayer = new Vector2(0, moveVertical);
+        rigidBody2D.velocity = movePlayer * movementSpeed;
     }
 }
