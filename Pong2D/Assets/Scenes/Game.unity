@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 855676}
   - component: {fileID: 855675}
   - component: {fileID: 855674}
-  - component: {fileID: 855677}
   m_Layer: 0
   m_Name: WallRight
   m_TagString: Untagged
@@ -164,7 +163,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -225,20 +224,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855672}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &855677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 855672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba703cda21fbb2d489c7da501f7f6ed2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerScore: {fileID: 1076989601}
-  score: 0
 --- !u!1 &69003177
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,6 +238,7 @@ GameObject:
   - component: {fileID: 69003179}
   - component: {fileID: 69003183}
   - component: {fileID: 69003182}
+  - component: {fileID: 69003184}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -381,6 +367,19 @@ MonoBehaviour:
   movementSpeed: 400
   extraSpeedPerHit: 50
   maxSpeed: 1000
+--- !u!114 &69003184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69003177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4fbb9856cf43b3448eaebfc892ee88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballMovement: {fileID: 69003183}
 --- !u!1 &91933437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1310,7 +1309,6 @@ GameObject:
   - component: {fileID: 853087229}
   - component: {fileID: 853087228}
   - component: {fileID: 853087227}
-  - component: {fileID: 853087230}
   m_Layer: 0
   m_Name: WallLeft
   m_TagString: Untagged
@@ -1342,7 +1340,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1403,20 +1401,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853087225}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &853087230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853087225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba703cda21fbb2d489c7da501f7f6ed2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerScore: {fileID: 2062347564}
-  score: 0
 --- !u!1 &909139885
 GameObject:
   m_ObjectHideFlags: 0
