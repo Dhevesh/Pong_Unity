@@ -234,6 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 91933438}
   - component: {fileID: 91933439}
+  - component: {fileID: 91933440}
   m_Layer: 0
   m_Name: Field
   m_TagString: Untagged
@@ -273,6 +274,20 @@ MonoBehaviour:
   scoreTextPlayer1: {fileID: 1076989599}
   scoreTextPlayer2: {fileID: 2062347562}
   goalToWin: 5
+--- !u!114 &91933440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91933437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54bdbcae041c9b048ae8dc1365224f51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1Racket: {fileID: 846740305}
+  player2Racket: {fileID: 276537365}
 --- !u!1001 &154589739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1834,6 +1849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballMovement: {fileID: 1849856489}
   scoreController: {fileID: 91933439}
+  racketReset: {fileID: 91933440}
 --- !u!114 &1849856489
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,16 +13,19 @@ public class ScoreController : MonoBehaviour
     public GameObject scoreTextPlayer2;
 
     public int goalToWin;
+    private UpdateWinningPlayer updateWinningPlayer;
 
-    void Update()
+    void Update() //goes to game over screen
     {
         if (this.scorePlayer1 == goalToWin)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
+            
 
         }else if (this.scorePlayer2 == goalToWin)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
+            
         }
     }
 
