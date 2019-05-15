@@ -14,8 +14,8 @@ public class CollisionController : MonoBehaviour
 
         float racketHeight = c.collider.bounds.size.y;
 
-        float x = 0;
-        if (c.gameObject.name == "Player1Racket")
+        float x;
+        if (c.gameObject.name == "Racket_Player1")
         {
             x = 1;
         }
@@ -32,15 +32,17 @@ public class CollisionController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name == "Player1Racket" || collision.gameObject.name == "Player2Racket")
+        if (collision.gameObject.name == "Racket_Player1" || collision.gameObject.name == "Racket_Player2")
         {
             this.BounceFromRacket(collision);
         }else if (collision.gameObject.name == "WallLeft")
         {
             this.scoreController.GoalPlayer2();
+            this.ballMovement.PositionBall(true);
         }else if (collision.gameObject.name == "WallRight")
         {
             this.scoreController.GoalPlayer1();
+            this.ballMovement.PositionBall(false);
         }
     }
 }

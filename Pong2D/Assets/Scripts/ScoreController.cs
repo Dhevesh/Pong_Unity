@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ScoreController : MonoBehaviour
 {
@@ -13,16 +14,15 @@ public class ScoreController : MonoBehaviour
 
     public int goalToWin;
 
-    // Update is called once per frame
     void Update()
     {
         if (this.scorePlayer1 == goalToWin)
         {
-            Debug.Log("Player 1 has won");
+            SceneManager.LoadScene(2);
 
         }else if (this.scorePlayer2 == goalToWin)
         {
-            Debug.Log("Player 2 has won");
+            SceneManager.LoadScene(2);
         }
     }
 

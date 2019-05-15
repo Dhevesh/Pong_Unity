@@ -42,4 +42,23 @@ public class BallMovement : MonoBehaviour
         }
     }
 
+    public void PositionBall(bool isStartingPlayer1)
+    {
+        this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f,0f);
+        this.hitCounter = 0;
+        if (isStartingPlayer1)
+        {
+            this.gameObject.GetComponent<Rigidbody2D>().position = new Vector2(-42f, 0);
+            StartCoroutine(StartBall(false));
+            
+        }
+        else
+        {
+            this.gameObject.GetComponent<Rigidbody2D>().position = new Vector2(42f, 0);
+
+            StartCoroutine(StartBall(true));
+        }
+        
+    }
+
 }
