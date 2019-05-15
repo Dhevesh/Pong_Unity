@@ -6,6 +6,7 @@ public class CollisionController : MonoBehaviour
 {
     public BallMovement ballMovement;
     public ScoreController scoreController;
+    public RacketReset racketReset;
 
     void BounceFromRacket(Collision2D c)
     {
@@ -39,10 +40,12 @@ public class CollisionController : MonoBehaviour
         {
             this.scoreController.GoalPlayer2();
             this.ballMovement.PositionBall(true);
+            this.racketReset.ResetRacket();
         }else if (collision.gameObject.name == "WallRight")
         {
             this.scoreController.GoalPlayer1();
             this.ballMovement.PositionBall(false);
+            this.racketReset.ResetRacket();
         }
     }
 }

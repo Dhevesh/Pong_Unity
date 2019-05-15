@@ -19,9 +19,9 @@ public class BallMovement : MonoBehaviour
         this.hitCounter = 0;
         yield return new WaitForSeconds(2);
         if (isStartingPlayer1)
-            this.MoveBall(new Vector2(-1, 0));
+            this.MoveBall(new Vector2(-1f, 0f));
         else
-            this.MoveBall(new Vector2(1, 0));
+            this.MoveBall(new Vector2(1f, 0f));
     }
     public void MoveBall(Vector2 direction)
     {
@@ -48,13 +48,13 @@ public class BallMovement : MonoBehaviour
         this.hitCounter = 0;
         if (isStartingPlayer1)
         {
-            this.gameObject.GetComponent<Rigidbody2D>().position = new Vector2(-42f, 0);
+            this.gameObject.GetComponent<Rigidbody2D>().position = new Vector2(-42f, 0f);
             StartCoroutine(StartBall(false));
             
         }
         else
         {
-            this.gameObject.GetComponent<Rigidbody2D>().position = new Vector2(42f, 0);
+            this.gameObject.GetComponent<Rigidbody2D>().position = new Vector2(42f, 0f);
 
             StartCoroutine(StartBall(true));
         }
