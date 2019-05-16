@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class AIRacket : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject ball;
+    public float movementSpeed;
+    private void FixedUpdate()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (Mathf.Abs(this.transform.position.y - ball.transform.position.y) > 50)
+        {
+            if (transform.position.y < ball.transform.position.y)
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 1f) * movementSpeed;
+            }
+            else
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(0f, -1f) * movementSpeed;
+            }
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
+        }
     }
 }

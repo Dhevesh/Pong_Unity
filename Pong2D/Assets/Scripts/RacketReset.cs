@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class RacketReset : MonoBehaviour
 {
-    public Player1Racket player1Racket;
-    public Player2Racket player2Racket;
+    public GameObject player1Racket;
+    public GameObject player2Racket;
 
     public void ResetRacket()
     {

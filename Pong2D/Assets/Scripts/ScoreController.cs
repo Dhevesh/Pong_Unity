@@ -13,7 +13,6 @@ public class ScoreController : MonoBehaviour
     public GameObject scoreTextPlayer2;
 
     public int goalToWin;
-    private UpdateWinningPlayer updateWinningPlayer;
 
     void Update() //goes to game over screen
     {
@@ -23,9 +22,8 @@ public class ScoreController : MonoBehaviour
             
 
         }else if (this.scorePlayer2 == goalToWin)
-        {
+        {             
             SceneManager.LoadScene(3);
-            
         }
     }
 
